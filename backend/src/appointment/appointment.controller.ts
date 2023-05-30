@@ -9,6 +9,7 @@ import RequestWithUser from "../auth/requestWithUser.interface";
 export class AppointmentController {
     constructor(private readonly appointmentService: AppointmentService) {}
 
+    /*@todo: @UseGuards(JwtAuthenticationGuard) */
     @Post()
     async create(@Body() createAppointmentDto: CreateAppointmentDto, @Req() req: RequestWithUser) {
         return this.appointmentService.create(createAppointmentDto, req.user);
