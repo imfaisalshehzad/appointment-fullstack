@@ -1,0 +1,13 @@
+@media (max-width: 992px) {
+  .sidebar-sticky{
+    .inner-menu{
+      left: 76px;
+
+      &.active{
+        top: 52px;
+      }
+    }
+  }
+
+
+}

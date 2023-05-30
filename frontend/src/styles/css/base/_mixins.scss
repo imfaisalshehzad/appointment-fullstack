@@ -1,0 +1,40 @@
+@mixin letter-spacing($spacing) {
+  letter-spacing: ($spacing / 1000) * 1em;
+}
+@mixin radius($radius) {
+  -webkit-border-radius: $radius * 1px;
+  border-radius: $radius * 1px;
+}
+@mixin font-Roboto {
+  font-family: $font-family-Roboto;
+  font-style: $font-style;
+}
+@mixin font-OpenSans {
+  font-family: $font-family-OpenSans;
+  font-style: $font-style;
+}
+
+@mixin transition($speed) {
+  -webkit-transition: all $speed ease;
+  -moz-transition: all $speed ease;
+  -ms-transition: all $speed ease;
+  -o-transition: all $speed ease;
+  transition: all $speed ease;
+}
+
+@mixin scroller {
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: #FAFAFA;
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #FAFAFA;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #4B42AD;
+  }
+}
