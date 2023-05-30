@@ -1,9 +1,12 @@
-import {useForm, Controller, SubmitHandler} from "react-hook-form";
+import {useForm} from "react-hook-form";
 import Image from 'next/image';
 import cccircular from "../../public/cccircular.svg";
 import axios from "axios";
 import toast from "react-hot-toast";
 import {useRouter} from "next/router";
+import Link from "next/link";
+import {ForwardIcon} from "@heroicons/react/24/solid";
+import {Icon} from "@tremor/react";
 
 function Login() {
     const navigate = useRouter()
@@ -62,6 +65,7 @@ function Login() {
                                     <div className="signup_form_action">
                                         <button type="submit" className="btn">Login
                                         </button>
+                                        <Link href="/signup">Register<Icon size="xs" icon={ForwardIcon} /></Link>
                                     </div>
                                 </form>
                             </div>
