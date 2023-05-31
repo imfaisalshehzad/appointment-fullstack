@@ -29,5 +29,16 @@ Step-by-step instructions on how to install and set up project. Include any prer
 
 ```bash
 $ git clone https://github.com/imfaisalshehzad/appointment-fullstack.git
-$ cd yourproject
+
+Backend Installation
+$ cd backend
+$ docker-compose -f docker-compose.yml up -d
 $ npm install
+$ mv .env.local .env
+$ npm run start:dev
+
+Frontend Installation
+$ cd frontend
+$ npm install
+$ mv .env.local .env
+$ npm run start
